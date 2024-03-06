@@ -1,66 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Point and click adventure</title>
-    <link rel="stylesheet" href="Css/Style.Css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<!--If giving something an id, do it in the brackets from the first word!!-->
+
 <body>
-<div id="title"> 
-    <h1 id="mainTitle">something</h1>
-</div>
+    <div id="title">
+        <h1 id="mainTitle">Point and click</h1>
+    </div>
     <div id="gameWindow">
-    <!--inventory box-->
-           <div id="inventoryBox">
-
-           </div>
-           <!--Dialog Bar-->
-
-           <div id="dialogBar">
-
+        <!--Inventory box-->
+        <div id="inventoryBox" class="foreground">
+            <ul id="inventoryList">
+            </ul>
+        </div>
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
             <div id="setMainDialog">
-
-                <div id="heroAvatar">
-
-                    <div id="heroSpeech">
-                        
-                    </div>
-
-                    <div id="counterSpeech">
-
-                    </div>
-                    <!--counterCharacter-->
-                    <div id="counterCharacter">
-
-                    </div>
-
+                <div id="heroAvatar" class="foreground">
+                    <img src="ING/portairt.png" alt="hero avatar">
                 </div>
-
+                <div id="heroSpeech" class="foreground speechBubble">
+                    ...
+                </div>
+                <div id="counterSpeech" class="foreground speechBubble">
+                    ...
+                </div>
+                <div id="counterAvatar" class="foreground">
+                    <img id="misterCrabs" src="ING/crab_idle.gif" alt="Counter avatar">
+                </div>
+                <div id="brownBar" class="background"></div>
             </div>
+        </div>
 
-           </div>
+        <div id="world1">
+            <!--Foreground elements-->
+            <div id="warpKey" class="foreground"></div>
+            <div id="shell" class="foreground"></div>
+            <div id="portal" class="foreground"></div>
+            <div id="statue" class="foreground"></div>
+            <!--Background elements-->
+            <div id="tileMap" class="background">
+                <img src="ING/ClickMap1.png" alt="tilemap" draggable="false">
+            </div>
+        </div>
 
-           <!--Foreground Elements-->
-<div id="squareTree">
-
-</div>
-<!--Main Character-->
-<div id="hero">
-
-</div>
-<!--Background Ellements-->
-<div id="tileMap">
-
-</div>
-
+        <!--Main Character-->
+        <div id="hero" class="character">
+            <img src="ING/animated-character-1-idle.gif" alt="hero charcater" id="heroImage">
+        </div>
 
 
 
     </div>
+
+    <audio id="heroAudio">
+        <source src="ING/Gibberish - Sound Effect_01.mp3">
+    </audio>
+
+    <audio id="counterAudio">
+        <source src="ING/high pitch voice.mp3">
+    </audio>
+
+
 </body>
 
 </html>
+<script src="Java/main.js"></script>
