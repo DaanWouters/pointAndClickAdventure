@@ -80,8 +80,10 @@ function runGame() {
                     if (doorUnlocked) {
                         //change world 'none' is disable 'block' is enable
                         // Fade out world 1
-                        world1.style.transition = 'opacity 1s ease-in-out';
-                        world1.style.opacity = '0';
+                        //world1.style.transition = 'opacity 1s ease-in-out';
+                        //world1.style.opacity = '0';
+                        document.getElementById("world1").style.display = "none";
+                        document.getElementById("world2").style.display = "inline";
 
                         // After the fade out animation completes, hide world 1 and fade in world 2
                         setTimeout(function () {
