@@ -61,7 +61,23 @@ body {
     opacity: 0;
 }
 
+#counterSpeech2 {
+    width: 300px;
+    background-color: #FFFFFF;
+    top: 0px;
+    right: 72px;
+    opacity: 0;
+}
+
 #counterAvatar {
+    width: 72px;
+    height: 68px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0;
+}
+
+#counterAvatar2 {
     width: 72px;
     height: 68px;
     bottom: 0px;
@@ -110,11 +126,18 @@ body {
     top: 511.525px;
 }
 
+#misterCrabs {
+    width: 32px;
+    height: 56px;
+    left: 704px;
+    top: 287px;
+}
+
 #statue {
     width: 32px;
     height: 64px;
-    left: 704px;
-    top: 287px;
+    left: 156.2px;
+    top: 65.525px;
 }
 
 #hero {
@@ -126,7 +149,10 @@ body {
 
 }
 
-#tileMap1 {}
+#tileMap1 {
+    position: absolute;
+    z-index: 0;
+}
 
 #tileMap2 {
     position: absolute;

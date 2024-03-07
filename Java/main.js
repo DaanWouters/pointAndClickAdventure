@@ -103,11 +103,11 @@ function runGame() {
                         showMessage(heroSpeech, "Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..", heroAudio);
                         //console.log("Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..");
                     } else {
-                        showMessage(heroSpeech, "Fuck this door is locked and I don't have a key. boohoo :(", heroAudio);
+                        showMessage(heroSpeech, "What the actual fuckywucky is this platform, i think its a portal. Let me find the key!", heroAudio);
                         //console.log("Fuck this door is locked and I don't have a key. boohoo :(");
                     }
                     break;
-                case "statue":
+                case "misterCrabs":
                     document.getElementById("misterCrabs").style.transform = 'scale(3)';
                     showMessage(heroSpeech, "What an ugly Crab, Can you just go away?", heroAudio);
                     setTimeout(function () { counterAvatar.style.opacity = 1; }, 4 * sec);
@@ -119,10 +119,20 @@ function runGame() {
                     break;
                 default:
                     break;
+
+                case "statue":
+                    document.getElementById("statue").style.transform = 'scale(3)';
+                    showMessage(heroSpeech, "Wow, what a beautifull statue, i wonder how old it is...", heroAudio);
+                    setTimeout(function () { counterAvatar2.style.opacity = 1; }, 4 * sec);
+                    setTimeout(showMessage, 4.1 * sec, counterSpeech2, "FINALLY!!, i have a visitor!. I am waiting almost 800 years to tell someone my secret, and now its the day!!!", counterAudio2);
+                    setTimeout(showMessage, 8.1 * sec, heroSpeech, "Wow, first a talking crab and now a talking statue, what is this place?", heroAudio);
+                    setTimeout(showMessage, 12.1 * sec, counterSpeech2, "You are in the hidden world of Propopus, the world which is full of magic. you need to look for a note, in that note stands everything you need to know. Good luck!", counterAudio2);
+                    setTimeout(function () { counterAvatar2.style.opacity = 0; }, 16 * sec);
+                    break;
             }
         }
-    }
 
+    }
     /**
      * Add or remove item in inventory
      * @param {string} itemName 
