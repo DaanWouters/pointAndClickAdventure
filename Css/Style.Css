@@ -2,6 +2,7 @@ body {
     display: grid;
     grid-template-columns: auto 800px auto;
     grid-template-rows: auto 608px auto;
+    font-family: Arial, sans-serif;
 }
 
 #title {
@@ -68,6 +69,27 @@ body {
     right: 72px;
     opacity: 0;
 }
+
+#notes {
+    left: 390.4px;
+    top: 94.525px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+}
+
+
+
+#text-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
 
 #counterAvatar {
     width: 72px;

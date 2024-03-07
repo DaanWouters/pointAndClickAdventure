@@ -113,7 +113,7 @@ function runGame() {
                     setTimeout(function () { counterAvatar.style.opacity = 1; }, 4 * sec);
                     setTimeout(showMessage, 4.1 * sec, counsterSpeech, "You know i can hear u right..", counterAudio);
                     setTimeout(showMessage, 8.1 * sec, heroSpeech, "How the fuck do you talk to me, and how do you understand what i say?", heroAudio);
-                    setTimeout(showMessage, 12.1 * sec, counsterSpeech, "Just shut up.. If you want to get out of here just look at the little island for the coin for the chest u ugly moron!!", counterAudio);
+                    setTimeout(showMessage, 12.1 * sec, counsterSpeech, "Just shut up.. If you want to get out of here just look at the island for the coin and try it on the portal, if that didnt work, look at the chest in the middle, i dont give a f.", counterAudio);
                     setTimeout(function () { counterAvatar.style.opacity = 0; }, 16 * sec);
                     //console.log("hey you.. wanna know where the key is? It's by the graves.");
                     break;
@@ -121,7 +121,7 @@ function runGame() {
                     break;
 
                 case "statue":
-                    document.getElementById("statue").style.transform = 'scale(3)';
+                    document.getElementById("statue").style.transform = 'scale(1.2)';
                     showMessage(heroSpeech, "Wow, what a beautifull statue, i wonder how old it is...", heroAudio);
                     setTimeout(function () { counterAvatar2.style.opacity = 1; }, 4 * sec);
                     setTimeout(showMessage, 4.1 * sec, counterSpeech2, "FINALLY!!, i have a visitor!. I am waiting almost 800 years to tell someone my secret, and now its the day!!!", counterAudio2);
@@ -129,8 +129,21 @@ function runGame() {
                     setTimeout(showMessage, 12.1 * sec, counterSpeech2, "You are in the hidden world of Propopus, the world which is full of magic. you need to look for a note, in that note stands everything you need to know. Good luck!", counterAudio2);
                     setTimeout(function () { counterAvatar2.style.opacity = 0; }, 16 * sec);
                     break;
+
+                case "notes":
+                    console.log("pick up the notes")
+                    document.getElementById("notes").remove();
+                    changeInventory('notes', "add");
+                    if (gameState.notesPickedUp == false) {
+                        changeInventory("notes", "add");
+                        gameState.notesPickedUp = true;
+                    } else {
+                        console.log("There are no more Notes in the bushes!");
+                    }
+                    break;
             }
         }
+
 
     }
     /**
